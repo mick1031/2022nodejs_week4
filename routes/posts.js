@@ -31,13 +31,8 @@ router.patch('/:id', async (req, res, next) => {
     try {
         const { id } = req.params;
         const model = {
-            name: req.body.name,
-            tags: req.body.tags,
-            type: req.body.type,
             image: req.body.image,
             content: req.body.content,
-            likes: req.body.likes,
-            comments: req.body.comments,
         };
         const result = await Post.findByIdAndUpdate(id, model, { runValidators: true });
         if (result) {
