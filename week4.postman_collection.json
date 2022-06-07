@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "ee3c57cc-927c-4560-b8be-2e4b7832c336",
+		"name": "week4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20566821"
+	},
+	"item": [
+		{
+			"name": "取得所有 user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://radiant-cove-07131.herokuapp.com/users",
+					"protocol": "https",
+					"host": [
+						"radiant-cove-07131",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "取得所有 post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://radiant-cove-07131.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"radiant-cove-07131",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增單筆 post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\": \"記得那天 太陽壓著平原 風慢慢吹 沒有人掉眼淚 一切好美 好到我可以不用說話\",\r\n    \"image\": \"https://images.unsplash.com/photo-1652284225205-a27fce2b2ba7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=760&q=80\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://radiant-cove-07131.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"radiant-cove-07131",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "搜尋 post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://radiant-cove-07131.herokuapp.com/posts?q=臣",
+					"protocol": "https",
+					"host": [
+						"radiant-cove-07131",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "臣"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "排序 post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://radiant-cove-07131.herokuapp.com/posts?timeSort=asc",
+					"protocol": "https",
+					"host": [
+						"radiant-cove-07131",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					],
+					"query": [
+						{
+							"key": "timeSort",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "排序+搜尋 post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://radiant-cove-07131.herokuapp.com/posts?timeSort=asc&q=臣",
+					"protocol": "https",
+					"host": [
+						"radiant-cove-07131",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					],
+					"query": [
+						{
+							"key": "timeSort",
+							"value": "asc"
+						},
+						{
+							"key": "q",
+							"value": "臣"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
