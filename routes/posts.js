@@ -13,7 +13,7 @@ router.get('/', async (req, res, next) => {
 router.post('/', async (req, res, next) => {
     try {
         const model = {
-            user: "6298b898b428253dedb47e05",
+            user: "629f4fb6b5179025df75e85c",
             image: req.body.image,
             content: req.body.content
         };
